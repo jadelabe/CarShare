@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Car Share</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script language="JavaScript" type="text/javascript" src="index.js"></script>
+  <link REL="StyleSheet" TYPE="text/css" HREF="styles.css">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+</head>
+
+<body>
+
+  <header>Car Share</header>
+
+  <div class="navbar" id="navbar">
+    <a href="index.html">Home</a>
+    <a href="profile.html"class="logged">Profile</a>
+    <a href="chat.html"class="logged">Chat</a>
+    <div class="notLogged">
+      <form action="javascript:login()" id="login">
+        <input type="text" name="UserLogin" placeholder="DNI" id="dni">
+        <input type="password" name="PasswordLogin" placeholder="Password" id="pass">
+        <input type="submit" value="Log In">
+      </form>
+      <a href="signup.html">Sign Up</a>
+    </div>
+    <div class="logged" id="welcome">
+    </div>
+  </div>
+
+  <br>
+
+  <form action="javascript:search()">
+    <p1>From </p1><select name="origin" id="origin"></select>
+    <p1>To </p1><select name="destination" id="destination"></select>
+    <p1>Depart </p1><input type="date" data-date-inline-picker="false" data-date-open-on-focus="true" id="date"/>
+    <input type="submit" value="Search"><br /><br />
+    <p1><b>Filters:</b></p1>
+    <p1>Driver Rating &ge;</p1><input type="number" name="rating" min="0" max="5" id="rating">
+    <p1>Price &le; </p1><input type="number" name="price" min="0" max="100" id="price">
+    <p1>Completed Trips &ge; </p1><input type="number" name="completedTrips" min="0" id="completedTrips">
+
+  </form>
+
+  <br>
+
+  <table name="Trips" id=trips>
+    <tr>
+      <th>Origin</th>
+      <th>Destination</th>
+      <th>Departure</th>
+      <th>Arrival</th>
+      <th>Passengers</th>
+      <th>Price</th>
+      <th>Nº of Packages</th>
+      <th>Package Price</th>
+      <th>Driver</th>
+      <th>Driver Rating</th>
+      <th>Driver Email</th>
+      <th>Driver Phone</th>
+      <th class="passenger">My Packages</th>
+    </tr>
+  </table>
+
+  <br>
+
+  <h1>About</h1>
+  <p>Car Share is a WebService allowing you to share your car rides and save some money.</p>
+
+  <footer><p1>Javier de Lama Bermejo. 2017 </p1></footer>
+</body>
+
+</html>

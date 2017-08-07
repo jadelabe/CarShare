@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Car Share</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script language="JavaScript" type="text/javascript" src="signup.js"></script>
+  <link REL="StyleSheet" TYPE="text/css" HREF="styles.css">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+</head>
+
+<body>
+
+  <header>Car Share</header>
+
+  <div class="navbar" id="navbar">
+    <a href="index.html">Home</a>
+    <a href="profile.html"class="logged">Profile</a>
+    <a href="chat.html"class="logged">Chat</a>
+    <div class="notLogged">
+      <form action="javascript:login()" id="login">
+        <input type="text" name="UserLogin" placeholder="DNI" id="dni">
+        <input type="password" name="PasswordLogin" placeholder="Password" id="pass">
+        <input type="submit" value="Log In">
+      </form>
+      <a href="signup.html">Sign Up</a>
+    </div>
+    <div class="logged" id="welcome">
+    </div>
+  </div>
+
+  <form action="javascript:signUp()" method="post" enctype="multipart/form-data" id="signUp">
+    <input type="text" name="DNIRegister" placeholder="DNI"><br>
+    <input type="text" name="nameRegister" placeholder="Name"><br>
+    <input type="text" name="emailRegister" placeholder="E-mail"><br>
+    <input type="text" name="MobilePhoneNumberRegister" placeholder="Mobile Phone Number"><br>
+    <input type="text" name="PasswordRegister" placeholder="Password"><br>
+    <input type="text" name="PasswordConfirmRegister" placeholder="Confirm Password"><br>
+    Picture <input type="file" name="image" value="P"><br>
+    <input type="radio" name="driver" value="1"> Driver
+    <input type="radio" name="driver" value="0"> Passenger<br>
+    <input type="submit" value="Sign Up">
+  </form>
+  <hr>
+  <br>
+  <p2>In order to verify your account and use it to its full potential, we need to verify your phone number via SMS</p2>
+  <br>
+  <form action="javascript:sendSMS()" method="post">
+    <input type="text" name="MobilePhoneVerify" placeholder="Mobile Phone Number" id="phoneVerify"><br>
+    <input type="submit" value="Send Code">
+  </form>
+  <hr>
+  <br>
+  <p2>Fill the code we send you via SMS in the box below</p2>
+  <br>
+  <form action="javascript:verifySMS()" method="post">
+    <input type="text" name="codeVerify" placeholder="SMS Code" id="codeVerify"><br>
+
+    <input type="submit" value="Verify Code">
+  </form>
+  <footer><p1>Javier de Lama Bermejo. 2017 </p1></footer>
+</body>
+
+</html>

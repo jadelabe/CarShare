@@ -1,0 +1,16 @@
+INDEX:
+Show last 5 comments in drivers
+
+Profile:
+All: Set Trips Completed
+Driver: Delete and edit trips
+Passenger: Time constrains for cancelling and rating trips
+
+Chat:
+ALL
+
+Delivery:
+-Use namespace in each php
+-Encapsulate PHP, one model in /models for each DB table
+-Export Database
+-Only one .js

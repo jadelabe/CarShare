@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Car Share</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script language="JavaScript" type="text/javascript" src="chat.js"></script>
+  <link REL="StyleSheet" TYPE="text/css" HREF="styles.css">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+</head>
+
+<body>
+
+  <header>Car Share</header>
+
+  <div class="navbar" id="navbar">
+    <a href="index.html">Home</a>
+    <a href="profile.html"class="logged">Profile</a>
+    <a href="chat.html"class="logged">Chat</a>
+    <div class="notLogged">
+      <form action="javascript:login()" id="login">
+        <input type="text" name="UserLogin" placeholder="DNI" id="dni">
+        <input type="password" name="PasswordLogin" placeholder="Password" id="pass">
+        <input type="submit" value="Log In">
+      </form>
+      <a href="signup.html">Sign Up</a>
+    </div>
+    <div class="logged" id="welcome">
+    </div>
+  </div>
+
+
+  <hr>
+
+  <p class="chatbox">
+    <span>
+      text
+    </span>
+  </p>
+  <form action="/sendMSG.php">
+    <textarea rows="4" cols="29">
+
+    </textarea>
+    <input type="submit" value="Send Message">
+  </form>
+
+  <footer><p1>Javier de Lama Bermejo. 2017 </p1></footer>
+</body>
+
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Car Share</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script language="JavaScript" type="text/javascript" src="profile.js"></script>
+  <link REL="StyleSheet" TYPE="text/css" HREF="styles.css">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+
+<body>
+  <header>Car Share</header>
+
+  <div class="navbar" id="navbar">
+    <a href="index.html">Home</a>
+    <a href="profile.html"class="logged">Profile</a>
+    <a href="chat.html"class="logged">Chat</a>
+    <div class="notLogged">
+      <form action="javascript:login()" id="login">
+        <input type="text" name="UserLogin" placeholder="DNI" id="dni">
+        <input type="password" name="PasswordLogin" placeholder="Password" id="pass">
+        <input type="submit" value="Log In">
+      </form>
+      <a href="signup.html">Sign Up</a>
+    </div>
+    <div class="logged" id="welcome">
+    </div>
+  </div>
+
+  <p3>My Trips</p3>
+  <br><br>
+  <p2 id="noTrips"></p2>
+  <table name="Trips" id="trips">
+    <tr>
+      <th>Origin</th>
+      <th>Destination</th>
+      <th>Departure</th>
+      <th>Arrival</th>
+      <th>Canceled</th>
+      <th class="passenger">Price</th>
+      <th class="passenger">My Packages</th>
+      <th class="passenger">Package Price</th>
+      <th class="passenger">Total Price</th>
+      <th class="passenger">Driver</th>
+      <th class="passenger">Driver Email</th>
+      <th class="passenger">Driver Phone</th>
+      <th>Passengers</th>
+      <th class="passenger">Rate</th>
+      <th class="passenger">Comment</th>
+    </tr>
+  </table>
+
+  <div class="driver">
+    <hr>
+    <p3>Create New Trip</p3>
+    <br><br>
+    <form method="post" id="newStop">
+      <table name="Stops" id="stops">
+        <thead>
+          <th>Stop</th>
+          <th>Last Destination?</th>
+          <th>Arrival Time</th>
+          <th>Departure Time</th>
+          <th>Nº of Passengers</th>
+          <th>Price</th>
+          <th>Allowed Packages</th>
+          <th>Package Price</th>
+          <th>Nº of Packages</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td><input type="text" name="Stop" placeholder="Ej: Madrid" ></td>
+            <td><input type="checkbox" name="Destination" ></td>
+            <td><input type="datetime-local" name="arrivalDate" value="2017-06-27T10:00"></td>
+            <td><input type="datetime-local" name="departureDate" value="2017-06-27T11:00"></td>
+            <td><input type="number" name="maxPassengers" min="1" max="20"></td>
+            <td><input type="number" name="price" min="1" max="100"></td>
+            <td><input type="checkbox" name="allowedPackages"></td>
+            <td><input type="number" name="packagePrice" min="1" max="100"></td>
+            <td><input type="number" name="nPackages" min="1" max="20"></td>
+            <td><button type="submit" value="+" class="tr_clone_add">+</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </form>
+  </div>
+  <br />
+  <input type="button" onclick="javascript:createTrip()" style="visibility:hidden;" id="registerTrip" value="Register Trip">
+  <!-- Model of new row -->
+  <table id="new-row-model" style.visibility: hidden >
+    <tbody>
+      <tr>
+        <td><input type="text" name="Stop" placeholder="Ej: Madrid" ></td>
+        <td><input type="checkbox" name="Destination" ></td>
+        <td><input type="datetime-local" name="arrivalDate" value="2017-06-27T10:00"></td>
+        <td><input type="datetime-local" name="departureDate" value="2017-06-27T11:00"></td>
+        <td><input type="number" name="maxPassengers" min="1" max="20"></td>
+        <td><input type="number" name="price" min="1" max="100"></td>
+        <td><input type="checkbox" name="allowedPackages"></td>
+        <td><input type="number" name="packagePrice" min="1" max="100"></td>
+        <td><input type="number" name="nPackages" min="1" max="20"></td>
+        <td><button type="submit" value="+" class="tr_clone_add">+</button></td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+
+<footer><p1>Javier de Lama Bermejo. 2017 </p1></footer>
+
+
+</html>

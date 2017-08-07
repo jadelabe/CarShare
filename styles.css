@@ -1,0 +1,109 @@
+header{
+  background-color: rgb(128,128,128);
+  color: rgb(255,255,255);
+  font-size: 2pc;
+  height: 30px;
+  position:fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+}
+
+div.navbar{
+  background-color: rgb(0,0,0);
+  color: rgb(255,255,255);
+  height: 30px;
+  position:fixed;
+  top:50px;
+  left:0px;
+  right:0px;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+div.navbar a{
+  text-decoration: none;
+  color: rgb(255,255,255);
+  padding-left: 10px;
+  padding-right: 10px;
+  float:left;
+}
+.logged{
+  display:none;
+  float:right;
+}
+.notLogged{
+  float:right;
+}
+.notLogged form{
+  float:left;
+}
+.logged p3 {
+  float:left;
+}
+
+
+body{
+  padding:100px;
+}
+h1{
+  font-weight:   normal;
+}
+p{
+  font-weight: bold;
+  font-size: 20px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 75%;
+}
+th {
+  text-align: center;
+}
+td {
+  text-align: left;
+}
+table, th, td {
+ border: 1px solid black;
+}
+
+
+footer{
+  background-color: rgb(0,0,0);
+  color: rgb(255,255,255);
+  position:fixed;
+  bottom:0px;
+  left:0px;
+  right:0px;
+  margin-bottom:0px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+}
+footer p1{
+  float: right;
+  padding-right: 10px;
+}
+ #trips{
+   display:none;
+ }
+ .passenger{
+   display:none;
+ }
+ .driver{
+   display:none;
+ }
+.chatbox {
+  width:250px;
+  padding-top:5px;
+  border-style:solid;
+  border-color:#336699;
+  border-width:1px;
+  padding-left:3px;
+  padding-bottom:10px;
+  word-wrap: break-word;
+}​
